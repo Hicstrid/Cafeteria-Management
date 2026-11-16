@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whatsapp">
+
+    <!-- MAIN DASHBOARD CONTENT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/whatsapp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#176B45"
+            android:title="SmartServe"
+            android:titleTextColor="#FFFFFF"
+            app:navigationIconTint="#FFFFFF" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/smart_serve_logo"
+                    android:contentDescription="SmartServe Logo" />
+
+                <TextView
+                    android:id="@+id/tvDashboardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="SMART SERVE"
+                    android:textColor="#176B45"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Welcome"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="Use the menu button above to access the cafeteria system."
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <!-- NAVIGATION DRAWER -->
+
+    <LinearLayout
+        android:id="@+id/navigationDrawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/drawer_panel"
+        android:elevation="12dp"
+        android:clipToOutline="true">
+
+        <!-- SMART SERVE HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:background="#176B45">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerInside"
+                android:contentDescription="SmartServe Logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMART SERVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAFETERIA SYSTEM"
+                    android:textColor="#D9F0E3"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.08" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- MENU SECTION -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:gravity="center_vertical"
+            android:paddingStart="25dp"
+            android:text="MENU"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <!-- SCROLLABLE NAVIGATION ITEMS -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <!-- DASHBOARD -->
+
+                <TextView
+                    android:id="@+id/navDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/nav_selected"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="◷    Dashboard"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+                <!-- FOOD MENU -->
+
+                <TextView
+                    android:id="@+id/navMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="☷    Food Menu"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+                <!-- MY CART -->
+
+                <TextView
+                    android:id="@+id/navCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="▣    My Cart"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+                <!-- ORDERS -->
+
+                <TextView
+                    android:id="@+id/navOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="◉    Orders"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+
+
+
+                <!-- reports -->
+
+                <TextView
+                    android:id="@+id/navReports"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="▥    Reports"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+                <!-- manage menu-->
+
+                <TextView
+                    android:id="@+id/navManageMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="⚙    Manage Menu"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+
+                <!-- profile -->
+
+                <TextView
+                    android:id="@+id/navProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/nav_normal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="●    My Profile"
+                    android:textColor="#176B45"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <!-- back button -->
+
+        <TextView
+            android:id="@+id/navBack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/nav_normal"
+            android:gravity="center_vertical"
+            android:paddingStart="22dp"
+            android:text="‹    Back"
+            android:textColor="#176B45"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        <!-- logout button-->
+
+        <TextView
+            android:id="@+id/navLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/nav_logout"
+            android:gravity="center_vertical"
+            android:paddingStart="22dp"
+            android:text="Logout"
+            android:textColor="#C62828"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

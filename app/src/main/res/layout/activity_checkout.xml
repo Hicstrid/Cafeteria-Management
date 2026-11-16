@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        app:title="Checkout"
+        android:titleTextColor="#222222"
+        app:titleTextColor="#222222"
+        app:subtitleTextColor="#666666"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <!-- Logo -->
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/smart_serve_logo"
+                    android:contentDescription="SmartServe Logo" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMART SERVE"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:layout_marginTop="8dp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:background="@drawable/auth_card_background"
+                    android:elevation="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Checkout"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:textColor="#202020"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your details to complete your order"
+                        android:textSize="13sp"
+                        android:textColor="#777777"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- Full Name -->
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/input_backgound"
+                        android:padding="12dp"
+                        android:hint="Full Name"
+                        android:drawableStart="@android:drawable/ic_menu_myplaces"
+                        android:drawablePadding="10dp"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
+
+
+
+                    <!-- Phone/user number -->
+
+                    <EditText
+                        android:id="@+id/etStudentNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/input_backgound"
+                        android:drawableStart="@android:drawable/ic_menu_info_details"
+                        android:drawablePadding="40dp"
+                        android:hint= "User ID"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/input_backgound"
+                        android:padding="12dp"
+                        android:hint="Phone Number"
+                        android:drawableStart="@android:drawable/ic_menu_call"
+                        android:drawablePadding="10dp"
+                        android:inputType="phone"
+                        android:textSize="14sp" />
+
+                    <!-- Order Total -->
+
+                    <TextView
+                        android:id="@+id/tvCheckoutTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:text="Order Total: R0.00"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32" />
+
+                    <!-- Place order -->
+
+                    <Button
+                        android:id="@+id/btnPlaceOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="#176B45"
+                        android:text="PLACE ORDER"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+
+                <!-- Footer -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="© 2026 SmartServe. All Rights Reserved."
+                    android:textColor="#777777"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+</LinearLayout>

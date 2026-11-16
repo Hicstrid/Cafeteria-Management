@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whatsapp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="@drawable/auth_card_background"
+            android:elevation="5dp">
+
+            <!-- tietl -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create an Account"
+                android:textColor="#222222"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill in your details to get started"
+                android:textColor="#777777"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- name -->
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- userid-->
+
+            <EditText
+                android:id="@+id/etStudentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="StudentNumber"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- email -->
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- phone number -->
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- password -->
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- re-enter password -->
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@drawable/input_backgound" />
+
+            <!-- create account -->
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#176B45" />
+            <Button
+                android:id="@+id/btnGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:text="Continue with Google"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#176B45"/>
+            <!-- login -->
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Login"
+                android:textColor="#222222"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:padding="5dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
