@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         // Login Button
         binding.btnLogin.setOnClickListener {
 
-            val username = binding.edtStudentID.text.toString().trim()
+            val username = binding.edtUserId.text.toString().trim()
             val password = binding.edtPassword.text.toString().trim()
 
             if (username.isEmpty() || password.isEmpty()) {

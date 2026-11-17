@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
                 binding.etFullName.text.toString().trim()
 
             val studentNumber =
-                binding.etStudentNumber.text.toString().trim()
+                binding.etUserId.text.toString().trim()
 
             val email =
                 binding.etEmail.text.toString().trim()

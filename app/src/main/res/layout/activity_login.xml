@@ -41,7 +41,7 @@
                 android:layout_marginBottom="22dp"/>
 
             <EditText
-                android:id="@+id/edtStudentID"
+                android:id="@+id/edtUserId"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="User ID"
